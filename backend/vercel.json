@@ -1,8 +1,2 @@
-<<<<<<< HEAD
 { "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
-=======
-{ "version": 2, 
-  "builds":[{"src": "./index.mjs", "use": "@vercel/node"}],
-  "routes": [{"src": "/(.*)", "dest": "/"}]
-}    
->>>>>>> 1c1513e8ec42d7238c4bb8816ec6633c587ad269
+
