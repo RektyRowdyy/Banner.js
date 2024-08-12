@@ -6,7 +6,8 @@ import cors from "cors"
 const app = express();
 
 app.use(cors({
-    origin: 'https://banner-js-client.vercel.app',
+    
+    origin: ['https://banner-js-client.vercel.app', 'http://localhost:5173/'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],  // Specify allowed methods
     allowedHeaders: ['Content-Type', 'Authorization']  // Specify allowed headers
   }));
