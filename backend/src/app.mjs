@@ -5,7 +5,11 @@ import cors from "cors"
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://banner-js-client.vercel.app',
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],  // Specify allowed methods
+    allowedHeaders: ['Content-Type', 'Authorization']  // Specify allowed headers
+  }));
 // Handle pre-flight requests
 app.options('*', cors());
 app.use(express.json());
