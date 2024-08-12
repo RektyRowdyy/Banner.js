@@ -1,1 +1,1 @@
-export const DB_NAME = "userdb"
+export const DB_NAME = "defaultdb"
