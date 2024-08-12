@@ -17,10 +17,10 @@ function Banner() {
     const [timeLeft, setTimeLeft] = useState(0); // State for timeleft
     const [isVisible, setIsVisible] = useState(true); // State for visibility
     const navigate = useNavigate(); // Navigate to Internal Dashboard
-
+    
     useEffect(() => {
-        // Fetch banner data
-        axios.get('http://localhost:8000/api/banner/getBanner')
+        // Fetch banner data 
+        axios.get('https://banner-js-server-a4vq5oe76-rektyrowdyys-projects.vercel.app/api/banner/getBanner')
             .then(res => {
                 const data = res.data[0];
                 setBannerData(data); // Update Banner Details according to data received from API
