@@ -20,7 +20,7 @@ function Banner() {
     
     useEffect(() => {
         // Fetch banner data 
-        axios.get('https://banner-js-server-a4vq5oe76-rektyrowdyys-projects.vercel.app/api/banner/getBanner')
+        axios.get('http://localhost:8000/api/banner/getBanner')
             .then(res => {
                 const data = res.data[0];
                 setBannerData(data); // Update Banner Details according to data received from API

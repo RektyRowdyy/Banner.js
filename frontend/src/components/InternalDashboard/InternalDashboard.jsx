@@ -22,7 +22,7 @@ function InternalDashboard() {
     });
 
      useEffect(() => {
-        axios.get('https://banner-js-server-a4vq5oe76-rektyrowdyys-projects.vercel.app/api/banner/getBanner')
+        axios.get('http://localhost:8000/api/banner/getBanner')
             .then(res => {
                 const data = res.data[0];
                 setBannerData(data); // Update Banner Details according to data received from API
@@ -58,7 +58,7 @@ function InternalDashboard() {
         // If Validation passes
         try {
             bannerData.isVisible = isVisible;
-            await axios.put('https://banner-js-server-a4vq5oe76-rektyrowdyys-projects.vercel.app/api/banner/updateBanner', bannerData);
+            await axios.put('http://localhost:8000/api/banner/updateBanner', bannerData);
             setAlertMessage("Banner updated successfully!");
             setAlertType("success");
             setShowAlert(true);
